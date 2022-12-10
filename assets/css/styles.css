@@ -1,0 +1,122 @@
+/*----------------------------------------------------------------------------
+    Styles
+-----------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: 'robotoRegular';
+    src: url('../fonts/roboto-regular.woff2') format('woff2'),
+         url('../fonts/roboto-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #efefef;
+}
+
+@media screen and (min-width:780px) {
+       body{
+            height: 100vh;
+        }
+}
+
+body *{
+    box-sizing: border-box;
+}
+
+main{
+    height:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section{
+    background:#fff;
+}
+
+@media screen and (min-width:992px) {
+       .section{
+            width: 80%;
+        }
+}
+
+@media screen and (min-width:1200px) {
+       .section{
+            width: 60%;
+        }
+}
+
+.section__header{
+    display:flex;
+    justify-content: center;
+    padding:25px 15px 15px;
+    font:500 20px/30px 'Roboto Condensed';
+}
+
+.section__items{
+    display:flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+}
+
+@media screen and (max-width:779px) {
+    .section__items{
+        flex-direction: column;
+    }
+}
+
+.section__cols{
+    display:flex;
+}
+
+@media screen and (min-width:780px) {
+    .section__cols{
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width:779px) {
+    .section__cols{
+        flex-direction: column;
+    }
+}
+
+.section__item{
+    padding:15px 15px 15px 0;
+    position:relative;
+}
+
+
+@media screen and (min-width:780px) {
+       .section__item:not(.section__item--1st) {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+}
+
+.section__item__content{
+    position:relative;
+    height: 100%;
+}
+
+.section__item__image{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+}
+
+.section__item h2{
+    font:400 17px/24px 'Roboto Condensed';
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.5);
+    color:#fff;
+    margin: 0;
+}
